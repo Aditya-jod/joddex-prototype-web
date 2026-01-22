@@ -48,6 +48,38 @@
 /* Slightly stronger shadow on hover to emphasize depth */
 .card-tilt:hover { box-shadow: 0 20px 40px rgba(2,6,23,0.12); }
 
+/* 3D hover transform for cards */
+.card-3d {
+  transform-style: preserve-3d;
+  transition: transform 420ms cubic-bezier(.18,.9,.2,1), box-shadow 340ms ease;
+  will-change: transform;
+}
+
+.card-3d:hover {
+  transform: perspective(1100px) translateZ(8px) rotateX(4deg) rotateY(-10deg) scale(1.035);
+  box-shadow: 0 26px 56px rgba(2,6,23,0.5);
+}
+
+/* Depth effects for card children */
+.card-3d .decorative-icon {
+  transition: transform 460ms cubic-bezier(.18,.9,.2,1), opacity 380ms ease;
+  transform: translateZ(0);
+}
+
+.card-3d .icon-container {
+  transition: transform 420ms cubic-bezier(.18,.9,.2,1);
+  transform: translateZ(0);
+}
+
+.card-3d:hover .decorative-icon {
+  transform: translateZ(44px) translateY(-6px) translateX(6px) rotateZ(-8deg) scale(1.03);
+  opacity: 0.9;
+}
+
+.card-3d:hover .icon-container {
+  transform: translateZ(56px) translateY(-8px) rotateZ(6deg);
+}
+
 /* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .slide-left, .slide-right, .reveal, .card-tilt { animation-duration: 250ms !important; transition-duration: 200ms !important; }

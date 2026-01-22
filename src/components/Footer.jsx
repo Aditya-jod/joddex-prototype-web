@@ -14,7 +14,7 @@ const Footer = () => (
           <a href="https://www.linkedin.com/company/joddex" target="_blank" rel="noreferrer" aria-label="Joddex on LinkedIn" className="hover:opacity-90">
             <Linkedin className="w-6 h-6 text-blue-100" />
           </a>
-          <a href="https://www.instagram.com/joddex" target="_blank" rel="noreferrer" aria-label="Joddex on Instagram" className="hover:opacity-90">
+          <a href="https://www.instagram.com/joddex_official/" target="_blank" rel="noreferrer" aria-label="Joddex on Instagram" className="hover:opacity-90">
             <Instagram className="w-6 h-6 text-blue-100" />
           </a>
         </div>
@@ -43,7 +43,7 @@ const Footer = () => (
         <h4 className="text-sm font-bold text-blue-200 uppercase tracking-widest mb-3">Stay in touch</h4>
         <div className="flex items-center gap-3 bg-white/6 border border-white/8 p-3 rounded-md">
           <Mail className="w-5 h-5 text-blue-100" />
-          <a href="mailto:hello@joddex.com" className="text-sm text-blue-100 hover:text-white">hello@joddex.com</a>
+          <a href="#contact" className="text-sm text-blue-100 hover:text-white">Contact us</a>
         </div>
         <div className="mt-6 text-sm text-blue-200/60">© {new Date().getFullYear()} Joddex Labs. All rights reserved.</div>
       </div>
