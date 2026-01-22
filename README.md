@@ -1,16 +1,8 @@
-# Joddex — React + Vite + Tailwind starter
+# Joddex — Prototype Website
 
-Quick starter for a component-first React app using Vite and Tailwind CSS.
+This repository contains the Joddex prototype website. It is an internal company prototype demonstrating our product direction and user experience for AI-driven applicant matching.
 
-Getting started:
+Repository use:
+- Internal review, design partner demos, and deployment by the Joddex engineering team.
 
-```bash
-npm install
-npm run dev
-```
-
-Files scaffolded:
-- `src/App.js`, `src/main.jsx`, `src/styles/index.css`
-- `tailwind.config.js`, `postcss.config.js`, `vite.config.js`
-
-Next: build pages and sections under `src/pages` and `src/components`.
+Do not distribute or publish this repository without approval from the Joddex team.
