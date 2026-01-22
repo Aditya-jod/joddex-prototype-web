@@ -7,7 +7,7 @@ module.exports = {
     extend: {
       colors: {
         primary: "#2563EB",   // blue-600
-        deepBlue: "#0c121d",  // deep blue near-black (updated per request)
+        deepBlue: "#0c121d",  // deep blue near-black shade
         black: "#0b0b0b",
         secondary: "#1E40AF", // indigo-800
         accent: "#06B6D4",    // cyan-500

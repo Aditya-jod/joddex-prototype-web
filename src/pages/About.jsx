@@ -34,7 +34,7 @@ export default function AboutPage({ setActivePage }) {
 
           <div>
             <h3 className="text-lg font-semibold mb-3">How JODDEX helps</h3>
-            <p className="text-gray-600 mb-4">A multi-layer AI analyzes each resume section (skills, experience, education, projects) independently and ranks candidates by contextual relevance rather than exact wording.</p>
+            <p className="text-gray-600 mb-4">A multi-layer AI analyzes each resume section (skills, experience, education, projects, etc.) independently and ranks candidates by contextual relevance rather than exact wording.</p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <MiniFeature title="Semantic Matching" desc="Meaning-based ranking across sections." />

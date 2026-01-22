@@ -1,0 +1,55 @@
+/* Slow, smooth entrance animations and scroll reveal */
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-72px); }
+  65% { opacity: 0.85; transform: translateX(-18px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(72px); }
+  65% { opacity: 0.85; transform: translateX(18px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Hero lines: very slow and smooth so motion is easy to follow */
+.slide-left { animation: slideInLeft 3000ms cubic-bezier(.22,1,.36,1) forwards; animation-delay: var(--delay, 0ms); }
+.slide-right { animation: slideInRight 3000ms cubic-bezier(.22,1,.36,1) forwards; animation-delay: var(--delay, 720ms); }
+
+/* Reveal on scroll: long, gently easing transitions */
+.reveal { opacity: 0; transform: translateY(48px); transition: transform 2800ms cubic-bezier(.22,1,.36,1), opacity 2800ms cubic-bezier(.22,1,.36,1); }
+.reveal.in-view { opacity: 1; transform: translateY(0); }
+
+.reveal-left { transform: translateX(-48px); }
+.reveal-left.in-view { transform: translateX(0); }
+
+.reveal-right { transform: translateX(48px); }
+.reveal-right.in-view { transform: translateX(0); }
+
+/* small helper to stagger children using inline --delay */
+.reveal { transition-delay: var(--delay, 0ms); }
+
+/* subtle focus ring for keyboard users */
+:focus { outline: none; }
+
+/* Card tilt and cursor-follow glow */
+.card-tilt { position: relative; transform-origin: center; transition: transform 1100ms cubic-bezier(.22,1,.36,1), box-shadow 1100ms cubic-bezier(.22,1,.36,1); will-change: transform; }
+.card-tilt::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background: radial-gradient(circle at var(--mx,50%) var(--my,50%), rgba(59,130,246,0.08) 0px, rgba(59,130,246,0.04) 40%, transparent 60%);
+  transition: opacity 900ms cubic-bezier(.22,1,.36,1), background-position 900ms cubic-bezier(.22,1,.36,1);
+  mix-blend-mode: screen;
+}
+
+/* Slightly stronger shadow on hover to emphasize depth */
+.card-tilt:hover { box-shadow: 0 20px 40px rgba(2,6,23,0.12); }
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .slide-left, .slide-right, .reveal, .card-tilt { animation-duration: 250ms !important; transition-duration: 200ms !important; }
+  .card-tilt::before { display: none; }
+}
