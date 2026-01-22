@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root { height: 100%; }
+body { margin:0; font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:#fff; color:#0b0b0b }
+
+/* small helper for safe-area under fixed navbar */
+main { padding-top: 96px }
+
+/* subtle home background */
+.home-bg {
+  background-image: radial-gradient(circle at 10% 10%, rgba(37,99,235,0.05), transparent 15%), radial-gradient(circle at 90% 80%, rgba(14,165,164,0.03), transparent 20%);
+}
+
+/* When header has scrolled class, make nav underline and text contrast for dark background */
+.scrolled .nav-link::after {
+  background: #ffffff;
+}
+.scrolled .nav-link:hover {
+  color: #ffffff;
+}
+
+/* Ensure body content doesn't sit under fixed header */
+main, .main-wrap { padding-top: 76px; }
+
