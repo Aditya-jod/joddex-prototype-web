@@ -184,11 +184,11 @@ const Hero = ({ setActivePage, scrollY }) => (
     </div>
     <div className="absolute top-[25%] right-[20%] z-1 proof-badge delay-1 float-2 flex items-center gap-2 bg-[#001A3D] backdrop-blur-lg px-4 py-2 rounded-full shadow-sm border border-gray-100">
       <BarChart3 className="w-4 h-4 text-blue-200" />
-      <span className="text-sm font-semibold text-white">99.2% Accuracy</span>
+      <span className="text-sm font-semibold text-white">Multi-layer AI</span>
     </div>
     <div className="absolute bottom-[25%] left-[20%] z-1 proof-badge delay-2 float-3 flex items-center gap-2 bg-[#001A3D] backdrop-blur-lg px-4 py-2 rounded-full shadow-sm border border-gray-100">
       <Timer className="w-4 h-4 text-purple-200" />
-      <span className="text-sm font-semibold text-white">0.42s Parse Time</span>
+      <span className="text-sm font-semibold text-white">Lightning Fast Analysis</span>
     </div>
     <div className="absolute bottom-[25%] right-[20%] z-1 proof-badge delay-3 float-4 flex items-center gap-2 bg-[#001A3D] backdrop-blur-lg px-4 py-2 rounded-full shadow-sm border border-gray-100">
       <ShieldCheck className="w-4 h-4 text-green-200" />
