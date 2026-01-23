@@ -45,7 +45,7 @@ const Footer = () => (
           <Mail className="w-5 h-5 text-blue-100" />
           <a href="#contact" className="text-sm text-blue-100 hover:text-white">Contact us</a>
         </div>
-        <div className="mt-6 text-sm text-blue-200/60">© {new Date().getFullYear()} Joddex Labs. All rights reserved.</div>
+        <div className="mt-6 text-sm text-blue-200/60">© {new Date().getFullYear()} Joddex. All rights reserved.</div>
       </div>
     </div>
   </footer>
