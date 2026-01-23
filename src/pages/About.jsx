@@ -75,7 +75,7 @@ export default function AboutPage({ setActivePage }) {
 
                   <div className="p-4 bg-white/8 rounded-xl">
                     <h4 className="font-semibold text-white mb-2">Models & Data</h4>
-                    <p className="text-white/90 text-sm">Hybrid pipelines: rule-based extraction + transformer embeddings for semantic similarity and robust entity extraction.</p>
+                    <p className="text-white/90 text-sm">Advanced AI models trained on diverse career data to understand context, skills, and potential beyond surface-level information.</p>
                   </div>
 
                   <div className="p-4 bg-white/8 rounded-xl">
