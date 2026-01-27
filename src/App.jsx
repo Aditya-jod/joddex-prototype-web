@@ -89,7 +89,7 @@ const Navbar = ({ activePage, setActivePage }) => {
         >
           <div className="relative">
             <img 
-              src="/Joddex.png" 
+              src="/Joddex-logo-without-word.png" 
               alt="JODDEX Logo" 
               className="w-10 h-10 rounded-xl relative z-10 transition-transform duration-500 group-hover:scale-110"
             />
@@ -178,19 +178,19 @@ const Hero = ({ setActivePage, scrollY }) => (
     ></div>
 
     {/* Proof Snippets - Glassmorphism, Absolute Positioning, Bobbing Animation, Lower Z-Index */}
-    <div className="absolute top-[25%] left-[20%] z-1 proof-badge delay-0 float-1 flex items-center gap-2 bg-[#001A3D] backdrop-blur-lg px-4 py-2 rounded-full shadow-sm border border-gray-100">
+    <div className="absolute top-[25%] left-[5%] md:left-[20%] z-1 proof-badge delay-0 float-1 flex items-center gap-2 bg-[#001A3D] backdrop-blur-lg px-4 py-2 rounded-full shadow-sm border border-gray-100">
       <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
       <span className="text-sm font-semibold text-white">No Keyword Matching</span>
     </div>
-    <div className="absolute top-[25%] right-[20%] z-1 proof-badge delay-1 float-2 flex items-center gap-2 bg-[#001A3D] backdrop-blur-lg px-4 py-2 rounded-full shadow-sm border border-gray-100">
+    <div className="absolute top-[25%] right-[5%] md:right-[20%] z-1 proof-badge delay-1 float-2 flex items-center gap-2 bg-[#001A3D] backdrop-blur-lg px-4 py-2 rounded-full shadow-sm border border-gray-100">
       <Layers className="w-4 h-4 text-blue-200" />
       <span className="text-sm font-semibold text-white">Multi-layer AI</span>
     </div>
-    <div className="absolute bottom-[25%] left-[20%] z-1 proof-badge delay-2 float-3 flex items-center gap-2 bg-[#001A3D] backdrop-blur-lg px-4 py-2 rounded-full shadow-sm border border-gray-100">
+    <div className="absolute bottom-[25%] left-[5%] md:left-[20%] z-1 proof-badge delay-2 float-3 flex items-center gap-2 bg-[#001A3D] backdrop-blur-lg px-4 py-2 rounded-full shadow-sm border border-gray-100">
       <Timer className="w-4 h-4 text-purple-200" />
       <span className="text-sm font-semibold text-white">Lightning Fast Analysis</span>
     </div>
-    <div className="absolute bottom-[25%] right-[20%] z-1 proof-badge delay-3 float-4 flex items-center gap-2 bg-[#001A3D] backdrop-blur-lg px-4 py-2 rounded-full shadow-sm border border-gray-100">
+    <div className="absolute bottom-[25%] right-[5%] md:right-[20%] z-1 proof-badge delay-3 float-4 flex items-center gap-2 bg-[#001A3D] backdrop-blur-lg px-4 py-2 rounded-full shadow-sm border border-gray-100">
       <ShieldCheck className="w-4 h-4 text-green-200" />
       <span className="text-sm font-semibold text-white">Bias Shield Active</span>
     </div>
