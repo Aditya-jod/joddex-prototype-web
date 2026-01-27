@@ -516,7 +516,7 @@ export default function App() {
           <div className="max-w-7xl mx-auto bg-[#001A3D] rounded-3xl p-16 md:p-20 text-center text-white shadow-2xl hover:shadow-3xl transition-shadow duration-500">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h2>
             <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8">We're currently in prototype stage. For inquiries, partnerships, or to join our waitlist, please reach out through our social channels.</p>
-            <div className="flex flex-col sm:flex-row justify-center gap-6 items-center">
+            <div className="flex flex-col sm:flex-row justify-center gap-6 items-center mb-8">
               <a href="https://www.linkedin.com/company/joddex" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-blue-600 text-white rounded-xl text-lg font-semibold shadow-lg hover:scale-105 hover:shadow-xl hover:shadow-blue-500/30 transition-all duration-500 flex items-center gap-2">
                 <Linkedin className="w-5 h-5" />
                 LinkedIn
@@ -526,6 +526,7 @@ export default function App() {
                 Instagram
               </a>
             </div>
+            <p className="text-xl md:text-2xl text-blue-200 font-semibold">Email: contact@joddex.com</p>
             <p className="text-sm text-blue-200 mt-6">Full contact form coming soon with our official launch.</p>
           </div>
           </section>
