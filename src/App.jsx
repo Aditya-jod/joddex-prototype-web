@@ -22,8 +22,8 @@ import {
   Linkedin
 } from 'lucide-react';
 
-import FeatureCard from './components/FeatureCard';
-import AboutPage from './pages/About';
+import FeatureCard from './components/feature-card';
+import AboutPage from './pages/about';
 import './styles/animations.css';
 
 // --- Theme Constants ---
