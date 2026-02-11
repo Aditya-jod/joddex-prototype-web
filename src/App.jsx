@@ -27,12 +27,13 @@ import AboutPage from './pages/about';
 import './styles/animations.css';
 
 // --- Theme Constants ---
-const COLORS = {
-  primary: '#001A3D', // Deep Ink Blue
-  accent: '#3B82F6',  // Professional Blue
-  textMain: '#111827',
-  textMuted: '#4B5563',
-  border: '#E5E7EB'
+const PALETTE = {
+  bg: '#000000',          // true black
+  surface: '#0C0C0C',     // off-black for cards
+  heading: '#FFFFFF',
+  body: '#E0E0E0',
+  accent: '#7DD3FC',      // refined cyan accent
+  muted: '#A3A3A3'
 };
 
 // --- Navbar Component ---
@@ -78,14 +79,14 @@ const Navbar = ({ activePage, setActivePage, theme, toggleTheme }) => {
 
   const navShell = theme === 'dark'
     ? (isScrolled
-        ? 'bg-black/90 backdrop-blur-xl border-b border-gray-800 py-3 shadow-sm'
+        ? 'bg-black/90 backdrop-blur-xl py-3 shadow-[0_10px_40px_rgba(0,0,0,0.5)]'
         : 'bg-black/70 backdrop-blur-xl py-6')
     : (isScrolled
-        ? 'bg-white/90 backdrop-blur-xl border-b border-gray-100 py-3 shadow-sm'
+        ? 'bg-white/90 backdrop-blur-xl py-3 shadow-sm'
         : 'bg-transparent py-6');
 
-  const linkColor = theme === 'dark' ? 'text-gray-300 hover:text-white' : 'text-gray-500 hover:text-[#001A3D]';
-  const brandColor = theme === 'dark' ? 'text-white' : 'text-[#001A3D]';
+  const linkColor = theme === 'dark' ? 'text-gray-300 hover:text-white' : 'text-gray-700 hover:text-black';
+  const brandColor = theme === 'dark' ? 'text-white' : 'text-black';
 
   return (
     <nav className={`fixed w-full z-50 transition-all duration-500 ${navShell}`}>
@@ -96,13 +97,13 @@ const Navbar = ({ activePage, setActivePage, theme, toggleTheme }) => {
           onClick={() => setActivePage('home')}
           type="button"
         >
-          <div className="relative">
+          <div className="relative group">
             <img 
               src="/Joddex-logo-without-word.png" 
               alt="JODDEX Logo" 
               className="w-10 h-10 rounded-xl relative z-10 transition-transform duration-500 group-hover:scale-110"
             />
-            <div className="absolute inset-0 bg-blue-500 rounded-xl blur opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
+            <div className="absolute inset-0 bg-[#7DD3FC] rounded-xl blur opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
           </div>
           <span className={`text-xl font-bold tracking-tight ${brandColor}`}>JODDEX</span>
         </button>
@@ -125,12 +126,12 @@ const Navbar = ({ activePage, setActivePage, theme, toggleTheme }) => {
         <div className="hidden lg:flex items-center space-x-4">
           <button
             onClick={toggleTheme}
-            className={`px-3 py-2 rounded-lg border text-xs font-semibold flex items-center gap-2 hover:scale-105 transition-all duration-300 ${theme === 'dark' ? 'border-white/10 bg-white/5 text-white hover:bg-white/10' : 'border-gray-200 bg-white text-[#001A3D] hover:bg-gray-50'}`}
+            className={`px-3 py-2 rounded-lg text-xs font-semibold flex items-center gap-2 hover:scale-105 transition-all duration-200 ${theme === 'dark' ? 'bg-white/5 text-white hover:bg-white/10' : 'bg-gray-100 text-black hover:bg-gray-200'}`}
           >
-            {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4 text-[#001A3D]" />}
+            {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
             <span>{theme === 'dark' ? 'Light' : 'Dark'}</span>
           </button>
-          <button onClick={activePage === 'about' ? () => { setActivePage('home'); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); } : () => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className="px-6 py-2.5 bg-[#001A3D] text-white text-[13px] rounded-lg font-bold hover:bg-blue-600 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/40 transition-all duration-500 active:scale-95 shadow-lg shadow-blue-900/10 uppercase tracking-wider flex items-center">
+          <button onClick={activePage === 'about' ? () => { setActivePage('home'); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); } : () => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className={`px-6 py-2.5 text-[13px] rounded-lg font-bold hover:scale-105 transition-all duration-200 active:scale-95 uppercase tracking-wider flex items-center shadow-[0_15px_40px_rgba(0,0,0,0.4)] ${theme === 'dark' ? 'bg-[#7DD3FC] text-black hover:brightness-105' : 'bg-[#7DD3FC] text-black hover:brightness-105'}`}>
             Contact Us
             <ChevronRight className="w-4 h-4 ml-1" />
           </button>
@@ -303,7 +304,7 @@ export default function App() {
   const [activePage, setActivePage] = useState('home');
   const [scrollY, setScrollY] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('dark');
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
