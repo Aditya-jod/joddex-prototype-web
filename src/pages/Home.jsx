@@ -1,7 +1,7 @@
 import React from 'react'
-import Hero from '../components/Hero'
-import FeatureCard from '../components/FeatureCard'
-import PricingCard from '../components/PricingCard'
+import Hero from '../components/hero'
+import FeatureCard from '../components/feature-card'
+import PricingCard from '../components/pricing-card'
 import { Search, LayoutDashboard, Zap, CheckCircle2, Timer } from 'lucide-react'
 
 export default function Home() {
