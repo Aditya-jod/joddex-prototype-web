@@ -148,7 +148,7 @@ const Navbar = ({ activePage, setActivePage, theme, toggleTheme }) => {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className={`md:hidden absolute top-full left-0 w-full ${theme === 'dark' ? 'bg-[#0f1724] border-b border-gray-800' : 'bg-white border-b border-gray-100'} p-6 flex flex-col space-y-4 shadow-xl`}>
+        <div className={`md:hidden absolute top-full left-0 w-full ${theme === 'dark' ? 'bg-[#0c0c0c] border-b border-gray-800' : 'bg-white border-b border-gray-100'} p-6 flex flex-col space-y-4 shadow-xl`}>
           {navLinks.map((item) => (
             <button
               key={item.name}
@@ -169,7 +169,7 @@ const Navbar = ({ activePage, setActivePage, theme, toggleTheme }) => {
               {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
               {theme === 'dark' ? 'Light Mode' : 'Dark Mode'}
             </button>
-            <button onClick={() => { document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); setMobileMenuOpen(false); }} className="w-full py-3 text-center text-sm font-bold bg-[#001A3D] text-white rounded-lg hover:scale-105 hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-500">Contact Us</button>
+            <button onClick={() => { document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); setMobileMenuOpen(false); }} className="w-full py-3 text-center text-sm font-bold bg-[#7DD3FC] text-black rounded-lg hover:scale-105 hover:shadow-lg hover:shadow-[#7DD3FC]/40 transition-all duration-300">Contact Us</button>
           </div>
         </div>
       )}
@@ -182,9 +182,9 @@ const Hero = ({ setActivePage, scrollY, theme }) => (
   <section className={`relative pt-48 pb-32 px-6 lg:px-8 overflow-hidden ${theme === 'dark' ? 'bg-black' : 'bg-white'}`}>
     {/* Technical Background Pattern - Parallax */}
     <div 
-      className="absolute inset-0 z-0 opacity-[0.03]" 
+      className="absolute inset-0 z-0 opacity-[0.04]" 
       style={{ 
-        backgroundImage: 'radial-gradient(#001A3D 1px, transparent 1px)', 
+        backgroundImage: 'radial-gradient(#7DD3FC 1px, transparent 1px)', 
         backgroundSize: '32px 32px',
         transform: `translateY(${scrollY * 0.3}px)`
       }}
@@ -193,63 +193,63 @@ const Hero = ({ setActivePage, scrollY, theme }) => (
     
     {/* Ambient Glows - Parallax */}
     <div 
-      className="absolute top-0 right-0 w-[30vw] max-w-[400px] h-[30vw] max-h-[400px] bg-blue-100/40 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4 -z-10 pointer-events-none"
+      className="absolute top-0 right-0 w-[30vw] max-w-[420px] h-[30vw] max-h-[420px] bg-[#7DD3FC]/15 rounded-full blur-[140px] -translate-y-1/2 translate-x-1/4 -z-10 pointer-events-none"
       style={{ transform: `translateY(${scrollY * -0.2}px) translateX(25%) scale(${1 + scrollY * 0.0001})` }}
     ></div>
     <div 
-      className="absolute bottom-0 left-0 w-[25vw] max-w-[300px] h-[25vw] max-h-[300px] bg-gray-100/60 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/4 -z-10 pointer-events-none"
+      className="absolute bottom-0 left-0 w-[25vw] max-w-[320px] h-[25vw] max-h-[320px] bg-white/5 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/4 -z-10 pointer-events-none"
       style={{ transform: `translateY(${scrollY * 0.1}px) translateX(-25%) scale(${1 + scrollY * 0.00005})` }}
     ></div>
 
     {/* Proof Snippets - Glassmorphism, Absolute Positioning, Bobbing Animation, Lower Z-Index */}
-    <div className="absolute top-[25%] left-[5%] md:left-[20%] z-1 proof-badge delay-0 float-1 flex items-center gap-2 bg-[#001A3D] backdrop-blur-lg px-4 py-2 rounded-full shadow-sm border border-gray-100">
-      <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+    <div className="absolute top-[25%] left-[5%] md:left-[20%] z-1 proof-badge delay-0 float-1 flex items-center gap-2 bg-white/5 backdrop-blur-lg px-4 py-2 rounded-full shadow-lg shadow-black/40 border border-white/10">
+      <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
       <span className="text-sm font-semibold text-white">No Keyword Matching</span>
     </div>
-    <div className="absolute top-[25%] right-[5%] md:right-[20%] z-1 proof-badge delay-1 float-2 flex items-center gap-2 bg-[#001A3D] backdrop-blur-lg px-4 py-2 rounded-full shadow-sm border border-gray-100">
-      <Layers className="w-4 h-4 text-blue-200" />
+    <div className="absolute top-[25%] right-[5%] md:right-[20%] z-1 proof-badge delay-1 float-2 flex items-center gap-2 bg-white/5 backdrop-blur-lg px-4 py-2 rounded-full shadow-lg shadow-black/40 border border-white/10">
+      <Layers className="w-4 h-4 text-[#7DD3FC]" />
       <span className="text-sm font-semibold text-white">Multi-layer AI</span>
     </div>
-    <div className="absolute bottom-[25%] left-[5%] md:left-[20%] z-1 proof-badge delay-2 float-3 flex items-center gap-2 bg-[#001A3D] backdrop-blur-lg px-4 py-2 rounded-full shadow-sm border border-gray-100">
-      <Timer className="w-4 h-4 text-purple-200" />
+    <div className="absolute bottom-[25%] left-[5%] md:left-[20%] z-1 proof-badge delay-2 float-3 flex items-center gap-2 bg-white/5 backdrop-blur-lg px-4 py-2 rounded-full shadow-lg shadow-black/40 border border-white/10">
+      <Timer className="w-4 h-4 text-[#7DD3FC]" />
       <span className="text-sm font-semibold text-white">Lightning Fast Analysis</span>
     </div>
-    <div className="absolute bottom-[25%] right-[5%] md:right-[20%] z-1 proof-badge delay-3 float-4 flex items-center gap-2 bg-[#001A3D] backdrop-blur-lg px-4 py-2 rounded-full shadow-sm border border-gray-100">
-      <ShieldCheck className="w-4 h-4 text-green-200" />
+    <div className="absolute bottom-[25%] right-[5%] md:right-[20%] z-1 proof-badge delay-3 float-4 flex items-center gap-2 bg-white/5 backdrop-blur-lg px-4 py-2 rounded-full shadow-lg shadow-black/40 border border-white/10">
+      <ShieldCheck className="w-4 h-4 text-[#7DD3FC]" />
       <span className="text-sm font-semibold text-white">Bias Shield Active</span>
     </div>
-    <div className="absolute left-[10%] top-[50%] z-1 proof-badge delay-4 float-5 flex items-center gap-2 bg-[#001A3D] backdrop-blur-lg px-4 py-2 rounded-full shadow-sm border border-gray-100">
-      <Zap className="w-4 h-4 text-yellow-200" />
+    <div className="absolute left-[10%] top-[50%] z-1 proof-badge delay-4 float-5 flex items-center gap-2 bg-white/5 backdrop-blur-lg px-4 py-2 rounded-full shadow-lg shadow-black/40 border border-white/10">
+      <Zap className="w-4 h-4 text-[#7DD3FC]" />
       <span className="text-sm font-semibold text-white">Neural Context</span>
     </div>
-    <div className="absolute right-[10%] top-[50%] z-1 proof-badge delay-5 float-6 flex items-center gap-2 bg-[#001A3D] backdrop-blur-lg px-4 py-2 rounded-full shadow-sm border border-gray-100">
-      <Fingerprint className="w-4 h-4 text-red-200" />
+    <div className="absolute right-[10%] top-[50%] z-1 proof-badge delay-5 float-6 flex items-center gap-2 bg-white/5 backdrop-blur-lg px-4 py-2 rounded-full shadow-lg shadow-black/40 border border-white/10">
+      <Fingerprint className="w-4 h-4 text-[#7DD3FC]" />
       <span className="text-sm font-semibold text-white">Identity Neutrality</span>
     </div>
 
     <div className="max-w-5xl mx-auto text-center relative z-10">
-      <div className="inline-flex items-center space-x-3 bg-white border border-blue-100 px-4 py-1.5 rounded-full mb-10 shadow-lg animate-bounce">
+      <div className="inline-flex items-center space-x-3 bg-white/5 border border-white/10 px-4 py-1.5 rounded-full mb-10 shadow-lg shadow-black/30 animate-bounce">
         <span className="relative flex h-2 w-2">
-          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-          <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-600"></span>
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#7DD3FC] opacity-80"></span>
+          <span className="relative inline-flex rounded-full h-2 w-2 bg-[#7DD3FC]"></span>
         </span>
-        <span className="text-[11px] font-bold text-gray-500 uppercase tracking-[0.2em]">Beyond Matching. Real Intelligence.</span>
+        <span className="text-[11px] font-bold text-gray-200 uppercase tracking-[0.2em]">Beyond Matching. Real Intelligence.</span>
       </div>
       
       <h1 className={`text-5xl md:text-7xl lg:text-8xl font-bold mb-8 tracking-[-0.03em] leading-[0.95] ${theme === 'dark' ? 'text-white' : 'text-[#001A3D]'}`}>
         <span className="slide-left inline-block" style={{ animationDuration: '3000ms', animationDelay: '300ms' }}>AI that Understands</span>
         <br />
-        <span className="slide-right inline-block text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-gray-200" style={{ animationDuration: '3000ms', animationDelay: '600ms' }}>
+        <span className="slide-right inline-block text-transparent bg-clip-text bg-gradient-to-r from-[#7DD3FC] to-white" style={{ animationDuration: '3000ms', animationDelay: '600ms' }}>
           Resumes Like Humans<span className="blink">.</span>
         </span>
       </h1>
       
       <p className={`text-lg md:text-xl max-w-2xl mx-auto mb-12 font-medium leading-relaxed ${theme === 'dark' ? 'text-gray-300' : 'text-gray-500'}`}>
-        Joddex replaces keyword matching with <span className="text-[#001A3D] font-semibold">neural context</span>. We identify the top-tier talent that legacy ATS systems overlook.
+        Joddex replaces keyword matching with <span className="text-[#7DD3FC] font-semibold">neural context</span>. We identify the top-tier talent that legacy ATS systems overlook.
       </p>
 
       <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-        <button className="w-full sm:w-auto px-10 py-4 bg-[#001A3D] text-white rounded-xl font-bold text-sm shadow-xl shadow-blue-900/10 hover:bg-black hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-500 group">
+        <button className="w-full sm:w-auto px-10 py-4 bg-[#7DD3FC] text-black rounded-xl font-bold text-sm shadow-[0_20px_60px_rgba(0,0,0,0.35)] hover:shadow-[0_28px_70px_rgba(0,0,0,0.45)] hover:scale-105 transition-all duration-400 group">
           Join the Waitlist
           <ChevronRight className="inline-block ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
         </button>
@@ -261,7 +261,7 @@ const Hero = ({ setActivePage, scrollY, theme }) => (
               if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }, 400);
           }}
-          className="w-full sm:w-auto px-10 py-4 bg-white text-gray-900 border border-gray-200 rounded-xl font-bold text-sm hover:border-[#001A3D] hover:bg-gray-50 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-500">
+          className="w-full sm:w-auto px-10 py-4 bg-transparent text-white border border-white/20 rounded-xl font-bold text-sm hover:border-[#7DD3FC] hover:text-[#7DD3FC] hover:scale-105 hover:shadow-lg hover:shadow-[#7DD3FC]/30 transition-all duration-400">
           View Technical Vision
         </button>
         
@@ -276,24 +276,24 @@ const Hero = ({ setActivePage, scrollY, theme }) => (
 
 // --- Pricing Card ---
 const PricingCard = ({ tier }) => (
-  <div className={`flex flex-col p-8 rounded-3xl border border-gray-100 bg-white transition-all duration-300 hover:shadow-xl`}>
+  <div className="flex flex-col p-8 rounded-3xl border border-gray-800 bg-[#0b0b0b] transition-all duration-300 hover:shadow-[0_24px_80px_rgba(0,0,0,0.5)]">
     <div className="mb-4">
-      <h3 className={`text-xs font-bold uppercase tracking-[0.2em] mb-2 text-gray-400`}>
+      <h3 className="text-xs font-bold uppercase tracking-[0.2em] mb-2 text-gray-400">
         {tier.name}
       </h3>
-      <div className="inline-block px-3 py-1 rounded-full bg-yellow-50 text-yellow-700 font-bold text-sm">Launching Soon</div>
+      <div className="inline-block px-3 py-1 rounded-full bg-white/5 text-[#7DD3FC] font-bold text-sm border border-white/10">Launching Soon</div>
     </div>
 
-    <div className="space-y-3 mb-6 flex-grow text-gray-600">
+    <div className="space-y-3 mb-6 flex-grow text-gray-300">
       {tier.features && tier.features.map((f, i) => (
-        <div key={i} className="flex items-center text-[13px] font-medium text-gray-700">
-          <div className="w-1.5 h-1.5 rounded-full mr-3 bg-blue-900"></div>
+        <div key={i} className="flex items-center text-[13px] font-medium text-gray-200">
+          <div className="w-1.5 h-1.5 rounded-full mr-3 bg-[#7DD3FC]"></div>
           {f}
         </div>
       ))}
     </div>
 
-    <button className={`w-full py-3 rounded-xl text-xs font-bold uppercase tracking-widest bg-[#001A3D] text-white hover:bg-blue-700 border border-[#001A3D]`}>
+    <button className="w-full py-3 rounded-xl text-xs font-bold uppercase tracking-widest bg-[#7DD3FC] text-black hover:brightness-110 border border-[#7DD3FC]/70 transition-all duration-300">
       Launching Soon
     </button>
   </div>
@@ -409,10 +409,10 @@ export default function App() {
     <div className={`min-h-screen ${theme === 'dark' ? 'bg-black text-gray-100 selection:bg-gray-800 selection:text-white' : 'bg-white text-[#001A3D] selection:bg-blue-100 selection:text-[#001A3D]'} font-sans antialiased`}>
       {/* Loading Animation */}
       {isLoading && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-white">
+        <div className={`fixed inset-0 z-50 flex items-center justify-center ${theme === 'dark' ? 'bg-black' : 'bg-white'}`}>
           <div className="text-center">
-            <div className="w-16 h-16 border-4 border-blue-200 border-t-[#001A3D] rounded-full animate-spin mx-auto mb-4"></div>
-            <div className="text-xl font-bold text-[#001A3D]">Loading JODDEX...</div>
+            <div className="w-16 h-16 border-4 border-[#7DD3FC]/30 border-t-[#7DD3FC] rounded-full animate-spin mx-auto mb-4"></div>
+            <div className={`text-xl font-bold ${theme === 'dark' ? 'text-white' : 'text-[#001A3D]'}`}>Loading JODDEX...</div>
           </div>
         </div>
       )}
@@ -513,33 +513,33 @@ export default function App() {
 
             {/* Enhanced "Dashboard" Visual */}
             <div className="relative group">
-              <div className="absolute -inset-4 bg-gradient-to-tr from-blue-100 to-gray-100 rounded-[2.5rem] blur-xl opacity-70 group-hover:opacity-90 transition-opacity duration-500"></div>
+              <div className="absolute -inset-4 bg-gradient-to-tr from-[#7DD3FC]/15 via-transparent to-transparent rounded-[2.5rem] blur-3xl opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-              <div className={`relative p-8 rounded-2xl border dashboard-preview-shadow hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 ${theme === 'dark' ? 'bg-[#0b0b0b] border-gray-800' : 'bg-white border-gray-100'}`}>
+              <div className={`relative p-8 rounded-2xl border dashboard-preview-shadow hover:scale-105 hover:shadow-2xl hover:shadow-[#7DD3FC]/20 transition-all duration-500 ${theme === 'dark' ? 'bg-[#0b0b0b] border-gray-800' : 'bg-white border-gray-100'}`}>
                 <div className="flex items-center justify-between mb-6">
                   <div>
-                    <h3 className="text-lg font-bold text-[#001A3D]">Dashboard Preview</h3>
-                    <p className="text-sm text-gray-500">Realtime insights from the semantic layer</p>
+                    <h3 className={`text-lg font-bold ${theme === 'dark' ? 'text-white' : 'text-[#001A3D]'}`}>Dashboard Preview</h3>
+                    <p className={`${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'} text-sm`}>Realtime insights from the semantic layer</p>
                   </div>
                   <div className="flex items-center gap-3">
-                    <div className="text-xs text-gray-400">Updated</div>
-                    <div className="px-3 py-1 bg-gray-50 rounded-full text-sm font-medium">2m ago</div>
+                    <div className={`${theme === 'dark' ? 'text-gray-500' : 'text-gray-400'} text-xs`}>Updated</div>
+                    <div className={`${theme === 'dark' ? 'px-3 py-1 bg-white/5 text-gray-200 border border-white/10' : 'px-3 py-1 bg-gray-50 text-gray-700'} rounded-full text-sm font-medium`}>2m ago</div>
                   </div>
                 </div>
 
                 <div className="grid grid-cols-2 gap-4">
-                  <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-[#0f0f0f]' : 'bg-gray-50'}`}>
-                    <div className={`text-xs uppercase tracking-widest ${theme === 'dark' ? 'text-gray-400' : 'text-gray-400'}`}>Matches / hr</div>
+                  <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-[#0f0f0f] border border-gray-800' : 'bg-gray-50'}`}>
+                    <div className={`text-xs uppercase tracking-widest ${theme === 'dark' ? 'text-gray-500' : 'text-gray-500'}`}>Matches / hr</div>
                     <div className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-[#001A3D]'}`}>1,248</div>
                   </div>
-                  <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-[#0f0f0f]' : 'bg-gray-50'}`}>
-                    <div className={`text-xs uppercase tracking-widest ${theme === 'dark' ? 'text-gray-400' : 'text-gray-400'}`}>Avg Parse Time</div>
+                  <div className={`p-4 rounded-lg ${theme === 'dark' ? 'bg-[#0f0f0f] border border-gray-800' : 'bg-gray-50'}`}>
+                    <div className={`text-xs uppercase tracking-widest ${theme === 'dark' ? 'text-gray-500' : 'text-gray-500'}`}>Avg Parse Time</div>
                     <div className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-[#001A3D]'}`}>0.42s</div>
                   </div>
                   <div className={`col-span-2 p-4 rounded-lg border ${theme === 'dark' ? 'bg-[#0b0b0b] border-gray-800' : 'bg-white border-gray-100'}`}>
                     <div className={`text-sm mb-2 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-500'}`}>Top Signals</div>
                     <div className="flex gap-3 flex-wrap">
-                      <div className={`${theme === 'dark' ? 'bg-blue-900/40 text-blue-100' : 'bg-blue-50 text-blue-600'} px-3 py-1 rounded-full text-xs font-semibold`}>Neural Context</div>
+                      <div className={`${theme === 'dark' ? 'bg-[#7DD3FC]/20 text-[#7DD3FC]' : 'bg-blue-50 text-blue-600'} px-3 py-1 rounded-full text-xs font-semibold`}>Neural Context</div>
                       <div className={`${theme === 'dark' ? 'bg-gray-800 text-gray-200' : 'bg-gray-50 text-gray-700'} px-3 py-1 rounded-full text-xs font-semibold`}>Bias Shield</div>
                       <div className={`${theme === 'dark' ? 'bg-gray-800 text-gray-200' : 'bg-gray-50 text-gray-700'} px-3 py-1 rounded-full text-xs font-semibold`}>Skill Adjacency</div>
                     </div>
@@ -562,27 +562,27 @@ export default function App() {
 
         {/* Contact Section */}
         <section id="contact" className="py-24 px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto bg-[#001A3D] rounded-3xl p-16 md:p-20 text-center text-white shadow-2xl hover:shadow-3xl transition-shadow duration-500">
+          <div className="max-w-7xl mx-auto bg-gradient-to-br from-[#0c0c0c] via-[#0a0a0a] to-[#0f1624] rounded-3xl p-16 md:p-20 text-center text-white shadow-[0_40px_120px_rgba(0,0,0,0.55)] border border-white/10">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h2>
-            <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8">We're currently in prototype stage. For inquiries, partnerships, or to join our waitlist, please reach out through our social channels.</p>
+            <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-gray-300">We're currently in prototype stage. For inquiries, partnerships, or to join our waitlist, reach out through our channels.</p>
             <div className="flex flex-col sm:flex-row justify-center gap-6 items-center mb-8">
-              <a href="https://www.linkedin.com/company/joddex" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-blue-600 text-white rounded-xl text-lg font-semibold shadow-lg hover:scale-105 hover:shadow-xl hover:shadow-blue-500/30 transition-all duration-500 flex items-center gap-2">
+              <a href="https://www.linkedin.com/company/joddex" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-[#7DD3FC] text-black rounded-xl text-lg font-semibold shadow-lg hover:scale-105 hover:shadow-xl hover:shadow-[#7DD3FC]/40 transition-all duration-300 flex items-center gap-2">
                 <Linkedin className="w-5 h-5" />
                 LinkedIn
               </a>
-              <a href="https://www.instagram.com/joddex_official/" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white rounded-xl text-lg font-semibold shadow-lg hover:scale-105 hover:shadow-xl hover:shadow-pink-500/30 transition-all duration-500 flex items-center gap-2">
+              <a href="https://www.instagram.com/joddex_official/" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-white/10 text-white rounded-xl text-lg font-semibold shadow-lg hover:scale-105 hover:shadow-xl hover:shadow-white/20 transition-all duration-300 flex items-center gap-2">
                 <Instagram className="w-5 h-5" />
                 Instagram
               </a>
             </div>
-            <p className="text-xl md:text-2xl text-blue-200 font-semibold">Email: contact@joddex.com</p>
-            <p className="text-sm text-blue-200 mt-6">Full contact form coming soon with our official launch.</p>
+            <p className="text-xl md:text-2xl text-[#7DD3FC] font-semibold">Email: contact@joddex.com</p>
+            <p className="text-sm text-gray-400 mt-6">Full contact form coming soon with our official launch.</p>
           </div>
           </section>
         </main>
       )}
 
-      <footer className="bg-[#0f1724] text-gray-200 py-12">
+      <footer className="bg-[#0c0c0c] text-gray-200 py-12 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
           <div>
             <div className="text-xl font-bold text-white">JODDEX</div>
