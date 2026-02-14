@@ -9,3 +9,4 @@ Repository use:
 
 > ⚠️ **Warning:**  
 > Do not distribute or publish this repository without approval from the Joddex team.
+> Unauthorized sharing may lead to legal consequences and compromise our competitive advantage.
