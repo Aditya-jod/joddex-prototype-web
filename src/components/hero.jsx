@@ -15,7 +15,7 @@ const Hero = () => (
       
       <h1 className="text-6xl md:text-8xl font-black text-gray-900 mb-8 tracking-tight leading-[0.9]">
         AI that Understands <br />
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#002B5B] to-blue-600">
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-gray-600">
           Resumes Like Humans.
         </span>
       </h1>
