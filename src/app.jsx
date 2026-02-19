@@ -236,10 +236,10 @@ const Hero = ({ setActivePage, scrollY, theme }) => (
         <span className="text-[11px] font-bold text-gray-200 uppercase tracking-[0.2em]">Beyond Matching. Real Intelligence.</span>
         </div>
         
-        <h1 className={`text-5xl md:text-7xl lg:text-8xl font-bold mb-8 tracking-[-0.03em] leading-[0.95] ${theme === 'dark' ? 'text-white' : 'text-[#001A3D]'}`}>
+        <h1 className="text-5xl md:text-8xl font-black text-gray-900 mb-8 tracking-tight leading-[0.9]">
         <span className="slide-left inline-block" style={{ animationDuration: '3000ms', animationDelay: '300ms' }}>AI that Understands</span>
         <br />
-        <span className="slide-right inline-block text-transparent bg-clip-text bg-gradient-to-r from-[#7DD3FC] to-white" style={{ animationDuration: '3000ms', animationDelay: '600ms' }}>
+        <span className="slide-right inline-block text-transparent bg-clip-text bg-gradient-to-r from-gray-600 to-gray-400" style={{ animationDuration: '3000ms', animationDelay: '600ms' }}>
           Resumes Like Humans<span className="blink">.</span>
         </span>
         </h1>
