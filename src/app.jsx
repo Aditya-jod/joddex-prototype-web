@@ -281,7 +281,7 @@ const PricingCard = ({ tier }) => (
       <h3 className="text-xs font-bold uppercase tracking-[0.2em] mb-2 text-gray-600">
         {tier.name}
       </h3>
-      <div className="inline-block px-3 py-1 rounded-full bg-[#001A3D]/10 text-[#001A3D] font-bold text-sm border border-[#001A3D]/20">Launching Soon</div>
+      <div className="inline-block px-3 py-1 rounded-full bg-yellow-50 text-yellow-700 font-bold text-sm border border-[#001A3D]/20">Launching Soon</div>
     </div>
 
     <div className="space-y-3 mb-6 flex-grow text-gray-600">
