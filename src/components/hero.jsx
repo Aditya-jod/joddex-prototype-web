@@ -25,10 +25,10 @@ const Hero = () => (
       </p>
 
       <div className="flex flex-col sm:flex-row justify-center items-center gap-5">
-        <button className="w-full sm:w-auto px-10 py-5 bg-[#002B5B] text-white rounded-2xl font-bold text-lg shadow-xl shadow-blue-900/20 hover:scale-105 active:scale-95 transition-all">
+        <button className="w-full sm:w-auto px-10 py-5 bg-[#001A3D] text-white rounded-2xl font-bold text-lg shadow-xl shadow-blue-900/20 hover:scale-105 active:scale-95 transition-all">
           Join the Waitlist
         </button>
-        <button className="w-full sm:w-auto px-10 py-5 bg-white text-[#002B5B] border-2 border-gray-100 rounded-2xl font-bold text-lg hover:bg-gray-50 transition-all flex items-center justify-center group">
+        <button className="w-full sm:w-auto px-10 py-5 bg-white text-[#001A3D] border-2 border-gray-100 rounded-2xl font-bold text-lg hover:bg-gray-50 transition-all flex items-center justify-center group">
           Watch Demo <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
         </button>
       </div>

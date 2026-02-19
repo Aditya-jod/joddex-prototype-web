@@ -169,7 +169,7 @@ const Navbar = ({ activePage, setActivePage, theme, toggleTheme }) => {
               {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
               {theme === 'dark' ? 'Light Mode' : 'Dark Mode'}
             </button>
-            <button onClick={() => { document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); setMobileMenuOpen(false); }} className="w-full py-3 text-center text-sm font-bold bg-[#7DD3FC] text-black rounded-lg hover:scale-105 hover:shadow-lg hover:shadow-[#7DD3FC]/40 transition-all duration-300">Contact Us</button>
+            <button onClick={() => { document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); setMobileMenuOpen(false); }} className="w-full py-3 text-center text-sm font-bold bg-[#001A3D] text-white rounded-lg hover:scale-105 hover:bg-blue-900 transition-all duration-300">Contact Us</button>
           </div>
         </div>
       )}
@@ -249,7 +249,7 @@ const Hero = ({ setActivePage, scrollY, theme }) => (
       </p>
 
       <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-        <button className="w-full sm:w-auto px-10 py-4 bg-[#7DD3FC] text-black rounded-xl font-bold text-sm shadow-[0_20px_60px_rgba(0,0,0,0.35)] hover:shadow-[0_28px_70px_rgba(0,0,0,0.45)] hover:scale-105 transition-all duration-400 group">
+        <button className="w-full sm:w-auto px-10 py-4 bg-[#001A3D] text-white rounded-xl font-bold text-sm shadow-[0_20px_60px_rgba(0,0,0,0.35)] hover:shadow-[0_28px_70px_rgba(0,0,0,0.45)] hover:scale-105 hover:bg-blue-900 transition-all duration-400 group">
           Join the Waitlist
           <ChevronRight className="inline-block ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
         </button>
