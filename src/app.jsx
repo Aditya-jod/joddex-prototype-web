@@ -192,63 +192,63 @@ const Hero = ({ setActivePage, scrollY, theme }) => (
     </div>
     
     {/* Ambient Glows - Parallax */}
-    <div 
-      className="absolute top-0 right-0 w-[30vw] max-w-[420px] h-[30vw] max-h-[420px] bg-[#7DD3FC]/15 rounded-full blur-[140px] -translate-y-1/2 translate-x-1/4 -z-10 pointer-events-none"
-      style={{ transform: `translateY(${scrollY * -0.2}px) translateX(25%) scale(${1 + scrollY * 0.0001})` }}
-    ></div>
-    <div 
-      className="absolute bottom-0 left-0 w-[25vw] max-w-[320px] h-[25vw] max-h-[320px] bg-white/5 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/4 -z-10 pointer-events-none"
-      style={{ transform: `translateY(${scrollY * 0.1}px) translateX(-25%) scale(${1 + scrollY * 0.00005})` }}
-    ></div>
+      <div 
+        className="absolute top-0 right-0 w-[30vw] max-w-[420px] h-[30vw] max-h-[420px] bg-[#7DD3FC]/15 rounded-full blur-[140px] -translate-y-1/2 translate-x-1/4 -z-10 pointer-events-none"
+        style={{ transform: `translateY(${scrollY * -0.2}px) translateX(25%) scale(${1 + scrollY * 0.0001})` }}
+      ></div>
+      <div 
+        className="absolute bottom-0 left-0 w-[25vw] max-w-[320px] h-[25vw] max-h-[320px] bg-white/5 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/4 -z-10 pointer-events-none"
+        style={{ transform: `translateY(${scrollY * 0.1}px) translateX(-25%) scale(${1 + scrollY * 0.00005})` }}
+      ></div>
 
-    {/* Proof Snippets - Glassmorphism, Absolute Positioning, Bobbing Animation, Lower Z-Index */}
-    <div className="absolute top-[25%] left-[5%] md:left-[20%] z-1 proof-badge delay-0 float-1 flex items-center gap-2 bg-white/5 backdrop-blur-lg px-4 py-2 rounded-full shadow-lg shadow-black/40 border border-white/10">
-      <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-      <span className="text-sm font-semibold text-white">No Keyword Matching</span>
-    </div>
-    <div className="absolute top-[25%] right-[5%] md:right-[20%] z-1 proof-badge delay-1 float-2 flex items-center gap-2 bg-white/5 backdrop-blur-lg px-4 py-2 rounded-full shadow-lg shadow-black/40 border border-white/10">
-      <Layers className="w-4 h-4 text-[#7DD3FC]" />
-      <span className="text-sm font-semibold text-white">Multi-layer AI</span>
-    </div>
-    <div className="absolute bottom-[25%] left-[5%] md:left-[20%] z-1 proof-badge delay-2 float-3 flex items-center gap-2 bg-white/5 backdrop-blur-lg px-4 py-2 rounded-full shadow-lg shadow-black/40 border border-white/10">
-      <Timer className="w-4 h-4 text-[#7DD3FC]" />
-      <span className="text-sm font-semibold text-white">Lightning Fast Analysis</span>
-    </div>
-    <div className="absolute bottom-[25%] right-[5%] md:right-[20%] z-1 proof-badge delay-3 float-4 flex items-center gap-2 bg-white/5 backdrop-blur-lg px-4 py-2 rounded-full shadow-lg shadow-black/40 border border-white/10">
-      <ShieldCheck className="w-4 h-4 text-[#7DD3FC]" />
-      <span className="text-sm font-semibold text-white">Bias Shield Active</span>
-    </div>
-    <div className="absolute left-[10%] top-[50%] z-1 proof-badge delay-4 float-5 flex items-center gap-2 bg-white/5 backdrop-blur-lg px-4 py-2 rounded-full shadow-lg shadow-black/40 border border-white/10">
-      <Zap className="w-4 h-4 text-[#7DD3FC]" />
-      <span className="text-sm font-semibold text-white">Neural Context</span>
-    </div>
-    <div className="absolute right-[10%] top-[50%] z-1 proof-badge delay-5 float-6 flex items-center gap-2 bg-white/5 backdrop-blur-lg px-4 py-2 rounded-full shadow-lg shadow-black/40 border border-white/10">
-      <Fingerprint className="w-4 h-4 text-[#7DD3FC]" />
-      <span className="text-sm font-semibold text-white">Identity Neutrality</span>
-    </div>
+      {/* Proof Snippets - Glassmorphism, Absolute Positioning, Bobbing Animation, Lower Z-Index */}
+      <div className="absolute top-[25%] left-[5%] md:left-[20%] z-1 proof-badge delay-0 float-1 flex items-center gap-2 bg-[#001A3D]/5 backdrop-blur-lg px-4 py-2 rounded-full shadow-lg shadow-black/40 border border-white/10">
+        <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+        <span className="text-sm font-semibold text-white">No Keyword Matching</span>
+      </div>
+      <div className="absolute top-[25%] right-[5%] md:right-[20%] z-1 proof-badge delay-1 float-2 flex items-center gap-2 bg-[#001A3D]/5 backdrop-blur-lg px-4 py-2 rounded-full shadow-lg shadow-black/40 border border-white/10">
+        <Layers className="w-4 h-4 text-[#7DD3FC]" />
+        <span className="text-sm font-semibold text-white">Multi-layer AI</span>
+      </div>
+      <div className="absolute bottom-[25%] left-[5%] md:left-[20%] z-1 proof-badge delay-2 float-3 flex items-center gap-2 bg-[#001A3D]/5 backdrop-blur-lg px-4 py-2 rounded-full shadow-lg shadow-black/40 border border-white/10">
+        <Timer className="w-4 h-4 text-[#7DD3FC]" />
+        <span className="text-sm font-semibold text-white">Lightning Fast Analysis</span>
+      </div>
+      <div className="absolute bottom-[25%] right-[5%] md:right-[20%] z-1 proof-badge delay-3 float-4 flex items-center gap-2 bg-[#001A3D]/5 backdrop-blur-lg px-4 py-2 rounded-full shadow-lg shadow-black/40 border border-white/10">
+        <ShieldCheck className="w-4 h-4 text-[#7DD3FC]" />
+        <span className="text-sm font-semibold text-white">Bias Shield Active</span>
+      </div>
+      <div className="absolute left-[10%] top-[50%] z-1 proof-badge delay-4 float-5 flex items-center gap-2 bg-[#001A3D]/5 backdrop-blur-lg px-4 py-2 rounded-full shadow-lg shadow-black/40 border border-white/10">
+        <Zap className="w-4 h-4 text-[#7DD3FC]" />
+        <span className="text-sm font-semibold text-white">Neural Context</span>
+      </div>
+      <div className="absolute right-[10%] top-[50%] z-1 proof-badge delay-5 float-6 flex items-center gap-2 bg-[#001A3D]/5 backdrop-blur-lg px-4 py-2 rounded-full shadow-lg shadow-black/40 border border-white/10">
+        <Fingerprint className="w-4 h-4 text-[#7DD3FC]" />
+        <span className="text-sm font-semibold text-white">Identity Neutrality</span>
+      </div>
 
-    <div className="max-w-5xl mx-auto text-center relative z-10">
-      <div className="inline-flex items-center space-x-3 bg-white/5 border border-white/10 px-4 py-1.5 rounded-full mb-10 shadow-lg shadow-black/30 animate-bounce">
+      <div className="max-w-5xl mx-auto text-center relative z-10">
+        <div className="inline-flex items-center space-x-3 bg-white/5 border border-white/10 px-4 py-1.5 rounded-full mb-10 shadow-lg shadow-black/30 animate-bounce">
         <span className="relative flex h-2 w-2">
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#7DD3FC] opacity-80"></span>
           <span className="relative inline-flex rounded-full h-2 w-2 bg-[#7DD3FC]"></span>
         </span>
         <span className="text-[11px] font-bold text-gray-200 uppercase tracking-[0.2em]">Beyond Matching. Real Intelligence.</span>
-      </div>
-      
-      <h1 className={`text-5xl md:text-7xl lg:text-8xl font-bold mb-8 tracking-[-0.03em] leading-[0.95] ${theme === 'dark' ? 'text-white' : 'text-[#001A3D]'}`}>
+        </div>
+        
+        <h1 className={`text-5xl md:text-7xl lg:text-8xl font-bold mb-8 tracking-[-0.03em] leading-[0.95] ${theme === 'dark' ? 'text-white' : 'text-[#001A3D]'}`}>
         <span className="slide-left inline-block" style={{ animationDuration: '3000ms', animationDelay: '300ms' }}>AI that Understands</span>
         <br />
         <span className="slide-right inline-block text-transparent bg-clip-text bg-gradient-to-r from-[#7DD3FC] to-white" style={{ animationDuration: '3000ms', animationDelay: '600ms' }}>
           Resumes Like Humans<span className="blink">.</span>
         </span>
-      </h1>
-      
-      <p className={`text-lg md:text-xl max-w-2xl mx-auto mb-12 font-medium leading-relaxed ${theme === 'dark' ? 'text-gray-300' : 'text-gray-500'}`}>
+        </h1>
+        
+        <p className={`text-lg md:text-xl max-w-2xl mx-auto mb-12 font-medium leading-relaxed ${theme === 'dark' ? 'text-gray-300' : 'text-gray-500'}`}>
         Joddex replaces keyword matching with <span className="text-[#7DD3FC] font-semibold">neural context</span>. We identify the top-tier talent that legacy ATS systems overlook.
-      </p>
+        </p>
 
-      <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
         <button className="w-full sm:w-auto px-10 py-4 bg-[#001A3D] text-white rounded-xl font-bold text-sm shadow-[0_20px_60px_rgba(0,0,0,0.35)] hover:shadow-[0_28px_70px_rgba(0,0,0,0.45)] hover:scale-105 hover:bg-blue-900 transition-all duration-400 group">
           Join the Waitlist
           <ChevronRight className="inline-block ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -261,7 +261,7 @@ const Hero = ({ setActivePage, scrollY, theme }) => (
               if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }, 400);
           }}
-          className="w-full sm:w-auto px-10 py-4 bg-transparent text-white border border-white/20 rounded-xl font-bold text-sm hover:border-[#7DD3FC] hover:text-[#7DD3FC] hover:scale-105 hover:shadow-lg hover:shadow-[#7DD3FC]/30 transition-all duration-400">
+          className="w-full sm:w-auto px-10 py-4 bg-transparent text-[#001A3D] border border-[#001A3D] rounded-xl font-bold text-sm hover:border-[#001A3D] hover:text-[#001A3D] hover:scale-105 hover:shadow-lg hover:shadow-[#001A3D]/30 transition-all duration-400">
           View Technical Vision
         </button>
         
