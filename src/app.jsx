@@ -276,24 +276,24 @@ const Hero = ({ setActivePage, scrollY, theme }) => (
 
 // --- Pricing Card ---
 const PricingCard = ({ tier }) => (
-  <div className="flex flex-col p-8 rounded-3xl border border-gray-800 bg-[#0b0b0b] transition-all duration-300 hover:shadow-[0_24px_80px_rgba(0,0,0,0.5)]">
+  <div className="flex flex-col p-8 rounded-3xl border border-gray-200 bg-white transition-all duration-300 hover:shadow-md">
     <div className="mb-4">
-      <h3 className="text-xs font-bold uppercase tracking-[0.2em] mb-2 text-gray-400">
+      <h3 className="text-xs font-bold uppercase tracking-[0.2em] mb-2 text-gray-600">
         {tier.name}
       </h3>
-      <div className="inline-block px-3 py-1 rounded-full bg-white/5 text-[#7DD3FC] font-bold text-sm border border-white/10">Launching Soon</div>
+      <div className="inline-block px-3 py-1 rounded-full bg-[#001A3D]/10 text-[#001A3D] font-bold text-sm border border-[#001A3D]/20">Launching Soon</div>
     </div>
 
-    <div className="space-y-3 mb-6 flex-grow text-gray-300">
+    <div className="space-y-3 mb-6 flex-grow text-gray-600">
       {tier.features && tier.features.map((f, i) => (
-        <div key={i} className="flex items-center text-[13px] font-medium text-gray-200">
-          <div className="w-1.5 h-1.5 rounded-full mr-3 bg-[#7DD3FC]"></div>
+        <div key={i} className="flex items-center text-[13px] font-medium text-gray-700">
+          <div className="w-1.5 h-1.5 rounded-full mr-3 bg-[#001A3D]"></div>
           {f}
         </div>
       ))}
     </div>
 
-    <button className="w-full py-3 rounded-xl text-xs font-bold uppercase tracking-widest bg-[#7DD3FC] text-black hover:brightness-110 border border-[#7DD3FC]/70 transition-all duration-300">
+    <button className="w-full py-3 rounded-xl text-xs font-bold uppercase tracking-widest bg-[#001A3D] text-white hover:bg-blue-900 border border-[#001A3D] transition-all duration-300">
       Launching Soon
     </button>
   </div>
