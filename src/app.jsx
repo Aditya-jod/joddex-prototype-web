@@ -103,7 +103,7 @@ const Navbar = ({ activePage, setActivePage, theme, toggleTheme }) => {
               alt="JODDEX Logo" 
               className="w-10 h-10 rounded-xl relative z-10 transition-transform duration-500 group-hover:scale-110"
             />
-            <div className="absolute inset-0 bg-[#7DD3FC] rounded-xl blur opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
+            <div className="absolute inset-0 bg-[#001A3D] rounded-xl blur opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
           </div>
           <span className={`text-xl font-bold tracking-tight ${brandColor}`}>JODDEX</span>
         </button>
@@ -131,7 +131,7 @@ const Navbar = ({ activePage, setActivePage, theme, toggleTheme }) => {
             {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
             <span>{theme === 'dark' ? 'Light' : 'Dark'}</span>
           </button>
-          <button onClick={activePage === 'about' ? () => { setActivePage('home'); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); } : () => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className={`px-6 py-2.5 text-[13px] rounded-lg font-bold hover:scale-105 transition-all duration-200 active:scale-95 uppercase tracking-wider flex items-center shadow-[0_15px_40px_rgba(0,0,0,0.4)] ${theme === 'dark' ? 'bg-[#7DD3FC] text-black hover:brightness-105' : 'bg-[#7DD3FC] text-black hover:brightness-105'}`}>
+          <button onClick={activePage === 'about' ? () => { setActivePage('home'); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); } : () => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className={`px-6 py-2.5 text-[13px] rounded-lg font-bold hover:scale-105 transition-all duration-200 active:scale-95 uppercase tracking-wider flex items-center ${theme === 'dark' ? 'bg-[#001A3D] text-white hover:bg-blue-900' : 'bg-[#001A3D] text-white hover:bg-blue-900'}`}>
             Contact Us
             <ChevronRight className="w-4 h-4 ml-1" />
           </button>

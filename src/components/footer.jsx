@@ -2,7 +2,7 @@ import React from 'react'
 import { BrainCircuit, Linkedin, Instagram, Mail } from 'lucide-react'
 
 const Footer = () => (
-  <footer className="bg-[#0b1220] text-blue-100 py-16 px-6">
+  <footer className="bg-[#001A3D] text-blue-100 py-16 px-6">
     <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
       <div className="space-y-4">
         <div className="flex items-center space-x-3">

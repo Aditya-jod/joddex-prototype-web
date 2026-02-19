@@ -83,7 +83,7 @@ export default function Home() {
       </section>
 
       <section id="contact" className="py-24 px-6">
-        <div className="max-w-6xl mx-auto bg-[#002B5B] rounded-[4rem] p-12 md:p-20 text-center relative overflow-hidden shadow-2xl shadow-blue-900/30">
+        <div className="max-w-6xl mx-auto bg-[#001A3D] rounded-[4rem] p-12 md:p-20 text-center relative overflow-hidden shadow-2xl shadow-blue-900/30">
           <div className="absolute top-0 right-0 w-64 h-64 bg-blue-400/10 rounded-full -mr-20 -mt-20 blur-3xl"></div>
           
           <div className="relative z-10">
@@ -101,7 +101,7 @@ export default function Home() {
                 aria-label="Work email"
                 className="flex-grow px-5 py-4 rounded-lg bg-gray-50 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#0c121d] placeholder-gray-400 font-medium transition"
               />
-              <button type="submit" className="inline-flex items-center gap-2 bg-gradient-to-r from-[#0c121d] to-[#002B5B] text-white px-6 py-3 rounded-lg font-semibold shadow-lg hover:brightness-105 transform hover:-translate-y-0.5 transition">Submit</button>
+              <button type="submit" className="inline-flex items-center gap-2 bg-[#001A3D] text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-900 transform hover:-translate-y-0.5 transition">Submit</button>
               <p className="mt-3 text-xs text-gray-500 sm:mt-0 sm:ml-3">We respect your privacy — we won’t share your email.</p>
             </form>
             
